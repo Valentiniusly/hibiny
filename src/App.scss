@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Circe;
+  font-weight: 400;
+  src: url('./Circe.otf') format('otf');
+}
+@font-face {
+  font-family: Circe;
+  font-weight: 700;
+  src: url('./CirceBold.otf') format('otf');
+}
+html {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+}
+body {
+  height: 100%;
+  font-family: Circe, sans-serif;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.background {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  > img {
+    width: 100%;
+    background-color: #1e5581;
+    object-fit: cover;
+    object-position: left top;
+  }
+}
+
+.mountain {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  > img {
+    width: 100%;
+  }
+  span {
+    margin-top: 5px;
+    background: #87b0ba;
+    z-index: 100;
+    height: 40px;
+    padding: 0 25px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    a {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 42px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+  &.lavochor {
+    top: 3%;
+    left: 53%;
+    width: 16%;
+  }
+  &.chasnochor {
+    top: 21%;
+    left: 23%;
+    width: 14%;
+  }
+  &.kukisvumchor {
+    top: 26%;
+    left: 42%;
+    width: 17%;
+  }
+  &.udichvumchor {
+    top: 37%;
+    left: 30%;
+    width: 12%;
+  }
+  &.fersmana {
+    top: 37%;
+    left: 15%;
+    width: 13%;
+  }
+  &.tahtarvumchor {
+    top: 52%;
+    left: 36%;
+    width: 15%;
+  }
+  &.vudiavrchor {
+    top: 70%;
+    left: 30%;
+    width: 13%;
+  }
+  &.aikuaivenchor {
+    top: 75%;
+    left: 50%;
+    width: 14%;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.mountain-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+  .nav {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .back,
+    .fullscreen {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .back {
+      background-color: #ee8460;
+      svg {
+        transform: translatex(-4px);
+      }
+    }
+    .radio {
+      width: 140px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        width: 30px;
+        height: 30px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        &.active {
+          background-color: #fff;
+        }
+      }
+    }
+    .fullscreen {
+      background-color: #2170a1;
+    }
+  }
+}
+.mountain-info {
+  height: 100%;
+  flex-shrink: 2;
+  background: #2170a1;
+  z-index: 2;
+  padding: 135px 0 80px 0;
+  h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+    padding-left: 70px;
+  }
+  .text {
+    height: 70%;
+    width: 100%;
+    padding-right: 93px;
+    text-align: justify;
+    overflow: scroll;
+    margin-bottom: 70px;
+    padding-left: 70px;
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    &::-webkit-scrollbar {
+      width: 7px;
+      height: 100%;
+    }
+    &::-webkit-scrollbar-track {
+      background: #1c5681;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(135, 176, 186, 0.5);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(135, 176, 186, 1);
+    }
+  }
+  .icons {
+    width: 400px;
+    margin: 0 auto;
+    svg {
+      width: 100%;
+    }
+  }
+}
